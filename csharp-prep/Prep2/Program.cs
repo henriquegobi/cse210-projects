@@ -7,7 +7,7 @@ class Program
         Console.Write("Enter your grade percentage: ");
         double gradePercentage = double.Parse(Console.ReadLine());
 
-        char letter = 'F'; // Initialize to 'F' by default
+        char letter = 'F';
 
         if (gradePercentage >= 90)
         {
