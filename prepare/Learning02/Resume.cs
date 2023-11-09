@@ -8,7 +8,7 @@ namespace Learning02
         public void DisplayResume()
         {
             Console.WriteLine(_name);
-            Console.Write("Jobs:");
+            Console.WriteLine("Jobs:");
 
             foreach (Job job in _jobs)
             {
