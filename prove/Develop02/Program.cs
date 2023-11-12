@@ -22,7 +22,7 @@ class Program
 
     static void Main(string[] args)
     {
-
+        //The repository that has the prompts will always be the same, so we can add and edit without changing the code.
         const string PROMPTS_FILE_NMAE = "Prompts.txt";
 
         Journal journal = new Journal();
@@ -41,7 +41,7 @@ class Program
         List<Record> records = new List<Record>();
 
         string _loadedFile = "";
-        
+
         do
         {
             opt = MenuChoice();
@@ -95,6 +95,7 @@ class Program
                     if (_fileSavingChoice == "y")
                     {
                         nameFile = _loadedFile;
+                        nameFile += ".csv";
                         Console.WriteLine("saving...");
                         journal.SaveToFile(records, nameFile);
                         break;
@@ -102,6 +103,7 @@ class Program
 
                     Console.Write("Type the name of the file to save: ");
                     nameFile = Console.ReadLine();
+                    nameFile += ".csv";
                     Console.WriteLine("saving...");
 
                     journal.SaveToFile(records, nameFile);
